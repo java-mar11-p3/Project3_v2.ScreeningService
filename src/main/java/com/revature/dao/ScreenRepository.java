@@ -1,4 +1,4 @@
-package com.revature.repository;
+package com.revature.dao;
 
 import com.revature.dto.Screen;
 import org.springframework.data.jpa.repository.JpaRepository;

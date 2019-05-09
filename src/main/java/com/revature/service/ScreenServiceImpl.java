@@ -1,7 +1,7 @@
 package com.revature.service;
 
 import com.revature.dto.Screen;
-import com.revature.repository.ScreenRepository;
+import com.revature.dao.ScreenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +17,10 @@ public class ScreenServiceImpl implements ScreenService {
     @Override
     public List<Screen> getAllScreenings() {
         return repository.findAll();
+    }
+
+    @Override
+    public Screen getScreenByScreeningId(int id) {
+        return repository.findById(id).get();
     }
 }
