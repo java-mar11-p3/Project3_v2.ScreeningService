@@ -6,6 +6,8 @@ import java.util.List;
 
 
 public interface ScreenService {
-   public List<Screen> getAllScreenings();
-   public Screen getScreenByScreeningId(int id);
+   List<Screen> getAllScreenings();
+   Screen getScreenById(int id);
+   void addScreen(Screen screen);
+   void updateScreen(Screen screen, int id);
 }

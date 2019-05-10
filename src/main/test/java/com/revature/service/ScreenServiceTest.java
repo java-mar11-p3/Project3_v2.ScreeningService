@@ -41,12 +41,12 @@ public class ScreenServiceTest {
     public void testGetScreenByScreeningId() {
         Screen screen = new Screen();
         screen.setId(1);
-        screen.setCandidateId(2);
-        screen.setUserId(10);
+        screen.setCandidate_id(2);
+        screen.setUser_id(10);
         screen.setScreeningScore(100);
         screen.setScreeningNotes("GREAT JOB!");
         Mockito.when(repository.findById(1)).thenReturn(Optional.of(screen));
-        Screen s = screenService.getScreenByScreeningId(1);
+        Screen s = screenService.getScreenById(1);
         System.out.println(s);
         assertNotNull(s);
         assertEquals(1, s.getId());

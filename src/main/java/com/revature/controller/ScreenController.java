@@ -3,10 +3,8 @@ package com.revature.controller;
 import com.revature.dto.Screen;
 import com.revature.service.ScreenService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -18,8 +16,24 @@ public class ScreenController {
     private ScreenService screenService;
 
     @GetMapping
-    public List<Screen> list() {
-        System.out.println(screenService.getAllScreenings());
+    public List<Screen> getAllScreenings() {
         return screenService.getAllScreenings();
     }
+
+    @GetMapping("/{id}")
+    public Screen getScreeningById(@PathVariable int id) {
+        return screenService.getScreenById(id);
+    }
+
+    @PostMapping
+    public void addScreening(@RequestBody Screen screen) {
+        screenService.addScreen(screen);
+    }
+
+
+    @PutMapping("/{id}")
+    public void updateScreen(@RequestBody Screen screen, @PathVariable int id) {
+        screenService.updateScreen(screen, id);
+    }
+
 }

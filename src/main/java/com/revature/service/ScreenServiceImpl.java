@@ -20,7 +20,22 @@ public class ScreenServiceImpl implements ScreenService {
     }
 
     @Override
-    public Screen getScreenByScreeningId(int id) {
+    public Screen getScreenById(int id) {
         return repository.findById(id).get();
     }
+
+    @Override
+    public void addScreen(Screen screen) {
+        repository.save(screen);
+    }
+
+    @Override
+    public void updateScreen(Screen screen, int id) {
+        Screen screenToUpdate = repository.findById(id).get();
+        screenToUpdate.setScreeningNotes(screen.getScreeningNotes());
+        screenToUpdate.setScreeningScore(screen.getScreeningScore());
+        repository.save(screenToUpdate);
+
+    }
+
 }
