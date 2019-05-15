@@ -26,7 +26,7 @@ public class ScreenController {
     }
     
     @GetMapping("/userId/{user_id}")
-    public Screen getScreeningByUserId(@PathVariable int user_id) {
+    public List<Screen> getScreeningByUserId(@PathVariable int user_id) {
     	return screenService.getScreenByUserId(user_id);
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface ScreenRepository extends JpaRepository<Screen, Integer> {
-	Screen getScreenByUserId(int user_id);
+	List<Screen> getScreenByUserId(int user_id);
 	List<Screen> getScreeningsByCandidateId(int candidate_id);
 
 }
