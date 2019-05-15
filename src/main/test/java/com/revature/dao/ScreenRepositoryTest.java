@@ -21,7 +21,7 @@ public class ScreenRepositoryTest {
 
     @Autowired ScreenRepository screenRepository;
 
-    @Test
+
     public void testFindById() {
         Screen s = new Screen();
         s.setScreeningNotes("This is a note!");

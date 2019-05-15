@@ -30,7 +30,6 @@ public class ScreenController {
         screenService.addScreen(screen);
     }
 
-
     @PutMapping("/{id}")
     public void updateScreen(@RequestBody Screen screen, @PathVariable int id) {
         screenService.updateScreen(screen, id);
