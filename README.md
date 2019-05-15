@@ -7,9 +7,9 @@ Endpoints:
 ---------
 
 - GET: http://localhost:7000/screeningservice/screenings (Retrieve all screenings)
-- GET: http://localhost:7000/screeningservice/screenings/{id} (Retriever screening by id)
-- GET: http://localhost:7000/screeningservice/screenings/userId/{user_id} (Retriever screening by user id)
-- GET: http://localhost:7000/screeningservice/screenings/candidateId/{candidate_id} (Retriever screening by candidate id)
+- GET: http://localhost:7000/screeningservice/screenings/{id} (Retrieve screening by id)
+- GET: http://localhost:7000/screeningservice/screenings/userId/{user_id} (Retrieve screening by user id)
+- GET: http://localhost:7000/screeningservice/screenings/candidateId/{candidate_id} (Retrieve screening by candidate id)
 - POST: http://localhost:7000/screeningservice/screenings (Add screening to database)
 - PUT: http://localhost:7000/screeningservice/screenings/{id} (Update screening)
 
