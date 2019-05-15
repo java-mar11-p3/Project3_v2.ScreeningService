@@ -41,7 +41,7 @@ public class ScreenServiceTest {
     public void testGetScreenByScreeningId() {
         Screen screen = new Screen();
         screen.setId(1);
-        screen.setCandidate_id(2);
+        screen.setCandidateId(2);
         screen.setUserId(10);
         screen.setScreeningScore(100);
         screen.setScreeningNotes("GREAT JOB!");

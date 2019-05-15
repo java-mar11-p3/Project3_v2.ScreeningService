@@ -45,4 +45,8 @@ public class ScreenServiceImpl implements ScreenService {
 		return repository.getScreenByUserId(user_id);
 	}
 
+    @Override
+    public List<Screen> getScreenByCandidateId(int candidate_id) {
+        return repository.getScreeningsByCandidateId(candidate_id);
+    }
 }
