@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ScreenRepository extends JpaRepository<Screen, Integer> {
+	Screen getScreenByUserId(int user_id);
 
 }

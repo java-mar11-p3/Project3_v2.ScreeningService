@@ -24,6 +24,11 @@ public class ScreenController {
     public Screen getScreeningById(@PathVariable int id) {
         return screenService.getScreenById(id);
     }
+    
+    @GetMapping("/userId/{user_id}")
+    public Screen getScreeningByUserId(@PathVariable int user_id) {
+    	return screenService.getScreenByUserId(user_id);
+    }
 
     @PostMapping
     public void addScreening(@RequestBody Screen screen) {

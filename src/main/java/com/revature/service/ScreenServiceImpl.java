@@ -23,6 +23,8 @@ public class ScreenServiceImpl implements ScreenService {
     public Screen getScreenById(int id) {
         return repository.findById(id).get();
     }
+    
+    
 
     @Override
     public void addScreen(Screen screen) {
@@ -37,5 +39,10 @@ public class ScreenServiceImpl implements ScreenService {
         repository.save(screenToUpdate);
 
     }
+
+	@Override
+	public Screen getScreenByUserId(int user_id) {
+		return repository.getScreenByUserId(user_id);
+	}
 
 }

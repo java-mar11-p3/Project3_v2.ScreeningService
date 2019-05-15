@@ -42,7 +42,7 @@ public class ScreenServiceTest {
         Screen screen = new Screen();
         screen.setId(1);
         screen.setCandidate_id(2);
-        screen.setUser_id(10);
+        screen.setUserId(10);
         screen.setScreeningScore(100);
         screen.setScreeningNotes("GREAT JOB!");
         Mockito.when(repository.findById(1)).thenReturn(Optional.of(screen));
