@@ -9,6 +9,7 @@ Endpoints:
 - GET: http://domain-name/screenings (Retrieve all screenings)
 - GET: http://domain-name/screenings/{id} (Retriever screening by id)
 - GET: http://domain-name/screenings/userId/{user_id} (Retriever screening by user id)
+- GET: http://domain-name/screenings/candidateId/{candidate_id} (Retriever screening by candidate id)
 - POST: http://domain-name/screenings (Add screening to database)
 - PUT: http://domain-name/screenings/{id} (Update screening)
 
