@@ -72,6 +72,15 @@
         </repository>
     </repositories>
     <build>
+	    	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+		<mainClass>com.java.EurekaServer</mainClass>
+			</configuration>
+		</plugin>
+	</plugins>
         <finalName>Project3_v2.ScreeningService</finalName>
     </build>
 </project>
